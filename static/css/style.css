@@ -1,0 +1,11 @@
+*{
+  font-family: 'Inter', sans-serif;
+}
+
+html, body{
+  backdrop-filter: blur(100px);
+}
+
+:root {
+  color-scheme: dark;
+}
