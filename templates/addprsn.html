@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include "head.html" %}
+</head>
+
+<body class="bg-sea2 min-h-screen bg-cover">
+  {% include "navbar.html" %}
+  <section class="relative">
+    <div
+      class="flex flex-col w-96 mx-auto px-10 mt-16 pt-6 py-10 bg-gradient-to-br from-gray-800/90 to-gray-900/90 rounded-3xl">
+      <h3 class="text-center text-2xl font-semibold mb-6 text-gray-400">Add Person</h3>
+      <form method="post" action="/addprsn_submit">
+        <div class="flex flex-col mb-2 gap-2">
+          <label for="txtnbr" class="text-gray-300">NIM</label>
+          <input type="text"
+            class="outline-none border text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 "
+            id="txtnbr" name="txtnbr" required>
+        </div>
+        <div class="flex flex-col mb-2 gap-2">
+          <label for="txtname" class="text-gray-300">Nama</label>
+          <div class="">
+            <input type="text"
+              class="outline-none border text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400"
+              id="txtname" name="txtname" required>
+          </div>
+        </div>
+        <div class="flex flex-col mb-2 gap-2">
+          <label for="optskill" class="text-gray-300">Program Studi</label>
+          <div class="flex">
+            <select
+              class="form-control outline-none border text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400"
+              name="optskill" id="optskill">
+              <option value="Teknik Komputer">Teknik Komputer</option>
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Sistem Informasi">Sistem Informasi</option>
+              <option value="Teknologi Informasi">Teknologi Informasi</option>
+              <option value="Pendidikan Teknologi Informasi">Pendidikan Teknologi Informasi</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex mt-6 justify-end ">
+          <input type="submit" class="px-3 py-2 rounded-xl bg-gray-700 font-light w-1/3" value="Next">
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="./static/js/clock.js"></script>
+</body>
+
+</html>

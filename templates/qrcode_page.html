@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include "head.html" %}
+</head>
+
+<body class="bg-sea2 min-h-screen bg-cover">
+  {% include "navbar.html" %}
+  <div class="relative">
+    <div
+      class="flex gap-8 mx-12 h-screen px-8 mt-12 pt-8 shadow-lg border-black bg-gradient-to-b from-gray-700/70 rounded-t-3xl">
+      <div class="w-3/5">
+        <img src="{{ url_for('qrcode_video') }}" width="100%" class="img-thumbnail rounded-lg">
+      </div>
+      <div class="w-2/5" style="height:500px; overflow-y:auto;">
+        <div class="flex gap-4">
+          <a href="/"><img src="./static/img/back-button.png" width="30" style="
+filter: invert(68%) sepia(20%) saturate(169%) hue-rotate(179deg) brightness(93%) contrast(84%);"></a>
+          <h3 class="flex justify-center text-center font-bold text-gray-400 text-xl mb-6 ">Scan Barcode</h3>
+        </div>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+          <table class="w-full text-sm text-left text-gray-400">
+            <thead class="uppercase bg-gray-700 rounded-lg text-gray-400 pb-2">
+              <tr>
+                <th scope="col" class="px-6 py-3">NIM</th>
+                <th scope="col" class="px-6 py-3">Nama</th>
+                <th scope="col" class="px-6 py-3">Prodi</th>
+                <th scope="col" class="px-6 py-3">Added</th>
+              </tr>
+            </thead>
+            <tbody id="scandata">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./static/js/clock.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      let lastcnt = 0;
+      let cnt;
+      chkNewScan();
+
+      function chkNewScan() {
+        countTodayScan();
+        setTimeout(chkNewScan, 1000);
+      }
+
+      function countTodayScan() {
+        $.ajax({
+          url: '/countTodayScan',
+          type: 'GET',
+          dataType: 'json',
+          success: function (data) {
+            cnt = data.rowcount;
+            if (cnt > lastcnt) {
+              reloadTable();
+            }
+
+            lastcnt = cnt;
+          },
+          error: function (result) {
+            console.log('no result!')
+          }
+        })
+      }
+
+      function reloadTable() {
+      $.ajax({
+        url: '/loadData',
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+          var tr = $("#scandata");
+          tr.empty();
+          var data = response.response;
+
+          if (Array.isArray(data) && data.length > 0) {
+            $.each(data, function (index, item) {
+              tr.append('<tr class="bg-gray-800 border-gray-700 border-b">' +
+                '<td class="px-6 py-4">' + (item.nim_from_prs_mstr || '') + '</td>' + // NIM
+                '<td class="px-6 py-4">' + (item.prs_name || '') + '</td>' + // Nama
+                '<td class="px-6 py-4">' + (item.prs_skill || '') + '</td>' + // Prodi
+                '<td class="px-6 py-4">' + (item.time_added || '') + '</td>' + // Added
+                '</tr>');
+            });
+          } else {
+            console.log("No data returned or data is not an array.");
+            tr.append('<tr class="bg-gray-800 border-gray-700 border-b"><td colspan="4" class="px-6 py-4 text-center text-gray-500">No records found for today.</td></tr>');
+          }
+        },
+        error: function (xhr, status, error) {
+          console.log('AJAX error:', status, error);
+          console.log(xhr.responseText); // Log the full response text for more details
+        }
+      });
+    }
+    });
+  </script>
+</body>
+
+</html>
