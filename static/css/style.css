@@ -1,4 +1,4 @@
-*{
+/* *{
   font-family: 'Inter', sans-serif;
 }
 
@@ -8,4 +8,32 @@ html, body{
 
 :root {
   color-scheme: dark;
+} */
+
+
+
+body {
+    background-color: #0b89e9; /* Warna gelap sebagai fallback */
+}
+
+/* Ini adalah triknya: membuat lapisan baru di belakang konten */
+body::before {
+    content: ''; /* Wajib ada untuk pseudo-element agar bisa ditampilkan */
+    position: fixed; /* Membuatnya tetap di posisi bahkan saat halaman di-scroll */
+    top: 10;
+    left: 0;
+    width: 100vw;  /* Lebar penuh sesuai viewport */
+    height: 100vh; /* Tinggi penuh sesuai viewport */
+
+    /* === GANTI NAMA GAMBAR ANDA DI SINI === */
+    background-image: url('../img/wal.jpg');
+    background-size: cover; /* Memastikan gambar menutupi seluruh area */
+    background-position: center center;
+
+    /* === EFEK UTAMA: BLUR DAN PENGGELAPAN === */
+    /* Anda bisa mengubah nilai blur (misal: 10px) dan brightness (misal: 0.5) */
+    filter: blur(100px) brightness(0.8);
+
+    /* Menempatkan lapisan ini di paling belakang (-1) agar tidak menutupi konten */
+    z-index: -1;
 }
