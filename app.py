@@ -231,16 +231,16 @@ def enroll_faces_route():
 
     print("Memulai proses enrollment wajah...")
     for image_name in os.listdir(DATASET_DIR):
-        if image_name.endswith(".jpg") or image_name.endswith(".png"):
+        if image_name.endswith((".jpg", ".png")): 
             try:
-                prs_nbr = str(image_name.split(".")[0]) 
+                prs_nbr = str(image_name.split(".")[0])
                 image_path = os.path.join(DATASET_DIR, image_name)
 
                 if prs_nbr not in persons_in_db:
                     print(f"Skipping {image_name}: Person ID {prs_nbr} tidak ditemukan di database prs_mstr.")
                     continue
 
-                embedding_objs = DeepFace.represent(img_path=cropped_face, model_name='Facenet', enforce_detection=False)
+                embedding_objs = DeepFace.represent(img_path=image_path, model_name='Facenet', enforce_detection=False)
 
                 if embedding_objs and isinstance(embedding_objs, list) and 'embedding' in embedding_objs[0]:
                     embedding = embedding_objs[0]['embedding']
@@ -251,9 +251,10 @@ def enroll_faces_route():
 
                     if prs_nbr not in prs_nbr_to_name_skill_new:
                         prs_nbr_to_name_skill_new[prs_nbr] = persons_in_db[prs_nbr]
-
-                    if prs_nbr in known_face_embeddings_new and len(known_face_embeddings_new[prs_nbr]) == 1:
-                        enrolled_count +=1
+                    
+                    # Cek ini hanya sekali per orang
+                    if prs_nbr not in [key for key, val in known_face_embeddings_new.items() if len(val) > 1]:
+                         enrolled_count +=1
                 else:
                     print(f"Tidak ada wajah terdeteksi atau embedding tidak bisa dihasilkan dari {image_name}")
 
@@ -268,6 +269,7 @@ def enroll_faces_route():
     with open(EMBEDDINGS_FILE, 'wb') as f:
         pickle.dump(known_face_embeddings_new, f)
 
+    # Update global variables
     known_face_embeddings = known_face_embeddings_new
     prs_nbr_to_name_skill = prs_nbr_to_name_skill_new
 
