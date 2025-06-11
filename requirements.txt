@@ -1,7 +1,7 @@
 absl-py==2.2.2
 astunparse==1.6.3
 attrs==25.3.0
-beautifulsoup4==4.13.4
+
 blinker==1.6.3
 cachetools==5.5.2
 certifi==2025.4.26
@@ -97,7 +97,7 @@ tensorflow-estimator==2.13.0
 tensorflow-io-gcs-filesystem==0.34.0
 termcolor==2.4.0
 threadpoolctl==3.5.0
-torch==2.4.1
+
 tqdm==4.67.1
 triton==3.0.0
 typing_extensions
