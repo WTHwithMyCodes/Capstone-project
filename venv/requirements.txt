@@ -1,0 +1,16 @@
+# Main Framework
+Flask
+gunicorn
+
+# Database
+mysql-connector-python
+
+# AI & Image Processing
+deepface
+opencv-python-headless
+pyzbar
+Pillow
+numpy
+
+# Utilities
+python-dotenv
