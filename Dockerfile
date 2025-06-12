@@ -1,32 +1,35 @@
+# Dockerfile (Versi Final dengan Semua Dependensi Sistem)
+
+# Gunakan base image Python versi 3.9 yang ringan
 FROM python:3.9-slim
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    libgl1 \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
-    libssl-dev \
-    libffi-dev \
-    libzar0 \
-    && rm -rf /var/lib/apt/lists/*
-
-# Prevent .pyc and enable flush logs
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-ENV TF_CPP_MIN_LOG_LEVEL=2
-
+# Set direktori kerja di dalam container
 WORKDIR /app
 
+# Perbarui package manager (apt) dan instal SEMUA dependensi sistem yang dibutuhkan
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    gcc \
+    # Untuk OpenCV (memperbaiki error libGL.so.1)
+    libgl1-mesa-glx \
+    # Untuk pyzbar (memperbaiki error zbar shared library)
+    libzbar0 \
+    # Untuk error libgthread-2.0.so.0 (dependensi Glib)
+    libglib2.0-0 \
+    --no-install-recommends && \
+    rm -rf /var/lib/apt/lists/*
+
+# Salin file requirements.txt terlebih dahulu untuk caching
 COPY requirements.txt .
-RUN pip install --upgrade pip
+
+# Install semua pustaka Python yang dibutuhkan
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Salin semua sisa kode proyek Anda ke dalam container
 COPY . .
 
-EXPOSE 8080
+# Beritahu Docker port mana yang akan diekspos oleh aplikasi
+EXPOSE $PORT
 
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "app:app"]
-
+# Perintah untuk menjalankan aplikasi saat container dimulai
+CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "--workers", "1", "app:app"]
