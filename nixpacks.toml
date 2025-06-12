@@ -1,4 +1,0 @@
-aptPkgs = ["libgl1-mesa-glx", "libglib2.0-0"]
-
-[start]
-cmd = "gunicorn app;app"
