@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     libxrender-dev \
     libssl-dev \
     libffi-dev \
+    libzar0 \
     && rm -rf /var/lib/apt/lists/*
 
 # Prevent .pyc and enable flush logs
