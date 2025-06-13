@@ -23,9 +23,9 @@ Tim kami terdiri dari sekelompok kreator, pengembang, dan ahli strategi yang ber
 
 ## Tech Stack
 
-Proyek kami menggunakan berbagai alat dan teknologi untuk mewujudkan ide:
-- **Bahasa:** Python, JavaScript.
-- **Kerangka kerja:** Flask, Tailwinds
+Proyek ini menggunakan berbagai alat dan teknologi untuk mewujudkan ide:
+- **Languange:** Python (versi 3.8.10), JavaScript.
+- **Framework:** Flask, Tailwinds
 - **Library:** Opencv, DeepFace, TensorFlow, pyzbar.
 
 ---
@@ -49,10 +49,4 @@ Proyek kami menggunakan berbagai alat dan teknologi untuk mewujudkan ide:
    #atau
    flask run
    ```
-
-
-
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+   
