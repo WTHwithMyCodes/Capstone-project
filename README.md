@@ -32,9 +32,10 @@ Proyek ini menggunakan berbagai alat dan teknologi untuk mewujudkan ide:
 
 ### Installation
 
-1. Clone the repo
+1. Clone the repo 
    ```sh
    https://github.com/ProJustitia/Capstone-project.git
+   cd Capstone-project
    ```
 2. Membuat virtual env  dan installasi depedensi
     ```
@@ -49,4 +50,3 @@ Proyek ini menggunakan berbagai alat dan teknologi untuk mewujudkan ide:
    #atau
    flask run
    ```
-   
