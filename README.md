@@ -30,3 +30,29 @@ Proyek kami menggunakan berbagai alat dan teknologi untuk mewujudkan ide:
 
 ---
 
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/github_username/repo_name.git
+   ```
+2. Membuat virtual env  dan installasi depedensi
+    ```
+    python -m venv analisis_data
+    source analisis_data/bin/activate # linux
+    analisis_data/Scripts/activate    # Windows
+    pip install -r requirements.txt
+    ```
+3. Jalankan kode utama
+   ```
+   python app.py
+   #atau
+   flask run
+   ```
+
+
+
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
