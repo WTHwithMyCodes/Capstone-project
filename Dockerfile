@@ -7,11 +7,8 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     build-essential \
     gcc \
-    # Untuk OpenCV (memperbaiki error libGL.so.1)
     libgl1-mesa-glx \
-    # Untuk pyzbar (memperbaiki error zbar shared library)
     libzbar0 \
-    # Untuk error libgthread-2.0.so.0 (dependensi Glib)
     libglib2.0-0 \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
