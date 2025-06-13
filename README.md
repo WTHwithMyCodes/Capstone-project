@@ -34,7 +34,7 @@ Proyek ini menggunakan berbagai alat dan teknologi untuk mewujudkan ide:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   https://github.com/ProJustitia/Capstone-project.git
    ```
 2. Membuat virtual env  dan installasi depedensi
     ```
