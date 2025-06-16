@@ -26,7 +26,7 @@ Tim kami terdiri dari sekelompok kreator, pengembang, dan ahli strategi yang ber
 
 Proyek ini menggunakan berbagai alat dan teknologi untuk mewujudkan ide:
 - **Languange:** Python (versi 3.8.10), JavaScript, CSS.
-- **Framework:** Flask, Tailwinds
+- **Framework:** Flask, Supabase
 - **Library:** Opencv, DeepFace, TensorFlow, pyzbar.
 
 ---
