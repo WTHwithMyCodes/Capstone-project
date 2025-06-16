@@ -18,6 +18,7 @@ Tim kami terdiri dari sekelompok kreator, pengembang, dan ahli strategi yang ber
 | Learning Path |  ID       | Name                    | University                         | Status   |
 |------|------------------|-------------------------|------------------------------------|----------|
 | Machine Learning   | MC858D5Y1366     | Firman Fitrah Ramadhan         | Universitas Brawijaya   | Active   |
+| Machine Learning   | MC149D5Y0528     | Kamal Abdurrohman         | STT Pati   | Active   |
 
 
 
