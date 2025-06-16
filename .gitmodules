@@ -1,0 +1,3 @@
+[submodule "attendance-app"]
+	path = attendance-app
+	url = https://github.com/WTHwithMyCodes/Capstone-project.git
