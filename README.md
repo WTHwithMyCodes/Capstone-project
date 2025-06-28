@@ -6,8 +6,7 @@
 ![multi-num-1](https://github.com/user-attachments/assets/dadbc4f9-6f5a-40b0-a834-dcf1530c82df)
 ![multi-cat-1](https://github.com/user-attachments/assets/e411fbfb-9e02-4e9c-bf6e-3a78a7bb6ef6)
 ![multi-cat](https://github.com/user-attachments/assets/60da6da8-8cbf-4e16-8922-716ebad85c55)
-![mis-val-2](https://github.com/user-attachments/assets/4467c370-cb53-4095-a588-d1d54646d817)
-![mis-val-1](https://github.com/user-attachments/assets/2bfee9ac-7f20-4cd2-af89-7beae91d67f4)
+
 ![lab-en](https://github.com/user-attachments/assets/44bab83a-3a18-4356-a2a1-75a5eb3aa7e3)
 ![knn-4](https://github.com/user-attachments/assets/56791b8d-984e-4d7e-88c3-7162c2402ca0)
 ![knn-3](https://github.com/user-attachments/assets/d9a1d669-bd23-41e7-abfe-6f9b2c39d8ff)
@@ -18,8 +17,11 @@
 ![eva-3](https://github.com/user-attachments/assets/cc5529fc-0d43-453f-a2af-7db2a0901e3d)
 ![eva-2](https://github.com/user-attachments/assets/efdf8c7c-5d36-4a28-8e08-157b1899c464)
 ![eva-1](https://github.com/user-attachments/assets/a534631e-80f0-4008-8575-a7e485ff0413)
-![eda-info](https://github.com/user-attachments/assets/55b987ce-34eb-4059-aea9-dc7a29d709b9)
-![df-descr](https://github.com/user-attachments/assets/e01c6484-efab-40e4-828f-70cc604f6d35)
+![df-descr](https://github.com/user-attachments/assets/b8317d8f-1248-469b-b3f4-54200d6f46bb)
+![mis-val-2](https://github.com/user-attachments/assets/0ca7857d-5295-4fcd-b1ff-a48bfc6606ff)
+![mis-val-1](https://github.com/user-attachments/assets/7ec28e04-1caa-4798-839d-29a0c1753757)
+![eda-info](https://github.com/user-attachments/assets/ab4c3df3-8f87-4998-963e-057e914a53dc)
+
 ![bosplo-4](https://github.com/user-attachments/assets/60166e57-5ae4-41ef-b9b0-b319d5eda6f9)
 ![bosplo-3](https://github.com/user-attachments/assets/c3597994-0f85-4813-ba86-389d76a07cfb)
 ![bosplo-2](https://github.com/user-attachments/assets/5d555835-1a42-46fd-8eba-ace80484d416)
@@ -32,7 +34,8 @@
 ![uni_num](https://github.com/user-attachments/assets/b7b0df30-8026-4c35-88a0-2acfd8a7ef67)
 ![split-2](https://github.com/user-attachments/assets/79fcf815-cfd9-43dd-9a68-d593b73111d4)
 ![split-1](https://github.com/user-attachments/assets/9d9b9e2d-6174-4686-93c4-19a468ca3232)
-![shape-1](https://github.com/user-attachments/assets/0b50e8e4-8f83-4c0f-93cc-060757bad776)
+![shape-1](https://github.com/user-attachments/assets/16c44995-d15d-4723-8702-8c29257f59c3)
+
 ![scaled-data](https://github.com/user-attachments/assets/aac67e91-5ac1-45df-b5ee-5812a704b067)
 
 
