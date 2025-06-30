@@ -1,4 +1,5 @@
 
+![res1](https://github.com/user-attachments/assets/cf815eb1-d764-4b2e-9811-9125a252ac6c)
 
 ![rf-1](https://github.com/user-attachments/assets/045436fc-e687-4e7e-b611-8d60e9faefab)
 ![multi-num-1](https://github.com/user-attachments/assets/dadbc4f9-6f5a-40b0-a834-dcf1530c82df)
